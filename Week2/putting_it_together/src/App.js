@@ -1,0 +1,23 @@
+import './App.css';
+import PersonCard from './components/PersonCard.js';
+
+function App() {
+  return (
+    <div className="App">
+      <PersonCard
+        firstname={ "Jane"}
+        lastname={ "Doe" }
+        age={ 45 }
+        hairColor={ "Black" }
+      />
+      <PersonCard
+        firstname={ "John"}
+        lastname={ "Smith" }
+        age={ 88 }
+        hairColor={ "Brown" }
+      />
+    </div>
+  );
+}
+
+export default App;

@@ -5,35 +5,35 @@ function tossCoin() {
 }
 
 function fiveHeadsAsync() {
-  let headsCount = 0;
-  let attempts = 0;
-
   return new Promise((resolve, reject) => {
-    while(headsCount < 5) {
+    let headsCount = 0;
+    let attempts = 0;
+    let maxAttempts = 100;
+
+    while (headsCount < 5 && attempts <= maxAttempts) {
       attempts++;
       let result = tossCoin();
-      if(result === "heads") {
-        resolve( console.log(`${result} was flipped`));
+      console.log(`${result} was flipped`);
+      if (result === "heads") {
         headsCount++;
       } else {
-        console.log(`${result} was flipped`);
         headsCount = 0;
       }
-      if(attempts > 100) {
-        reject(console.log(`coin was flipped ${attempts} times`));
-      }
     }
-    return `It took ${attempts} tries to flip five "heads"`;
+    if (attempts <= maxAttempts) {
+      resolve(`It took ${attempts} tries to flip five "heads"`);
+    } else {
+      reject(`Attempts have exceeded ${maxAttempts} flips.`);
+    }
   });
 }
 
 
 function App() {
-  console.log( fiveHeadsAsync()
-    .then( res => console.log(res) )
-    .catch( err => console.log(err) )
-  );
-  console.log( "This is run after the fiveHeadsAsync function completes" );
+  fiveHeadsAsync()
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+  console.log( "When does this run now?" );
 }
 
 

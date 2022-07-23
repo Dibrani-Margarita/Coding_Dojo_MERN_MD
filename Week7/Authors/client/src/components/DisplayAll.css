@@ -1,0 +1,46 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table td, table th {
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    text-align: left
+}
+
+table th {
+    color: white;
+    background-color: lightgray;
+    align-content: left;
+}
+
+table td {
+    font-family:cursive;
+
+}
+
+table button {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    color: #eee;
+    border: 0px;
+}
+
+table .btn-primary {
+    background-image: linear-gradient(bisque, rgba(0, 0, 0, 0.616));
+}
+
+table .btn-danger {
+    background-image: linear-gradient(pink, rgba(0, 0, 0, 0.616));
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

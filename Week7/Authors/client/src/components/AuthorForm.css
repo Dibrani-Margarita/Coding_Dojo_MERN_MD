@@ -1,0 +1,28 @@
+.purple {
+    color: purple;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.form-div {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.form-div > * {
+    padding: 0.2rem;
+}
+
+.btn-primary {
+    background-color: lightskyblue;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    margin: 0.3rem 1rem 0.3rem 0;
+}
+
+
